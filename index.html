@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-image: url('Img/fondo.jpg'); /* Reemplaza con tu imagen */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    /* Fondo borroso */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('Img/fondo.jpg'); /* Reemplaza con tu imagen */
+      background-size: cover;
+      background-position: center;
+      filter: blur(8px);
+      z-index: -1;
+    }
+
+    .logo {
+      margin-top: 100px;
+      width: 300px;
+      margin-bottom: 10px;
+    }
+
+    .verified {
+      display: flex;
+      align-items: center;
+      font-size: 1.2em;
+      margin: 200px 0;
+    }
+    .verif-logo {
+  width: 20px; /* Tamaño del logo pequeño */
+  height: auto;
+  margin-right: 8px;
+}
+
+    .ticked {
+      color: #4CAF50; /* color de la tilde */
+      font-size: 1.5em;
+      margin-right: 8px;
+    }
+
+    .review {
+      font-size: 1.2em;
+      margin: 15px 20px;
+      text-align: center;
+    }
+
+    .button-wrapper {
+      margin-top: 60px;
+    }
+
+    /* Estilo del botón WhatsApp con borde luminoso y efecto de temblor */
+    a.whatsapp-button {
+      display: inline-block;
+      background-color: #25D366;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: box-shadow 0.3s, transform 0.2s;
+      border: 2px solid #fff;
+      box-shadow: 0 0 10px #25D366;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    /* Efecto de brillo luminoso en el borde */
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 10px #25D366;
+      }
+      to {
+        box-shadow: 0 0 20px #25D366, 0 0 30px #25D366;
+      }
+    }
+
+    /* Temblor (shake) en la etiqueta */
+    @keyframes shake {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      10% { transform: translate(-1px, -2px) rotate(-1deg); }
+      20% { transform: translate(-3px, 0px) rotate(1deg); }
+      30% { transform: translate(3px, 2px) rotate(0deg); }
+      40% { transform: translate(1px, -1px) rotate(1deg); }
+      50% { transform: translate(-1px, 2px) rotate(-1deg); }
+      60% { transform: translate(-3px, 1px) rotate(0deg); }
+      70% { transform: translate(3px, 1px) rotate(-1deg); }
+      80% { transform: translate(-1px, -1px) rotate(1deg); }
+      90% { transform: translate(1px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+    /* Aplica el temblor */
+    a.whatsapp-button:hover {
+      animation: shake 0.5s;
+      cursor: pointer;
+    }
+
+    /* Responsivo */
+    @media(max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      .review {
+        font-size: 1em;
+      }
+      a.whatsapp-button {
+        padding: 12px 24px;
+        font-size: 1em;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <!-- Logo como título principal -->
+  <img src="Img/IMG_0408.PNG" alt="Logo" class="logo" />
+
+  <!-- Reseña -->
+  <div class="review">
+    Únete a nuestra gran comunidad ahora y gana sin límites
+  </div>
+
+  <!-- Botón que lleva a WhatsApp -->
+  <div class="button-wrapper">
+    <a 
+      href="https://wa.me/1234567890" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="whatsapp-button">
+      ¡Contáctanos en WhatsApp!
+    </a>
+  </div>
+  <div class="verified">
+    <img src="Img/verificado1.png" alt="Logo Verificado" class="verif-logo" />
+    <span class="verif-text">Página Verificada</span>
+  </div>
+
+</body>
+</html>
